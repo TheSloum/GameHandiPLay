@@ -10,6 +10,8 @@ using UnityEngine;
     public float maxSpeed = 20f;
     public float friction = 10f;
     public GameObject dotToAppear;
+    public GameObject dotToAppearAmour;
+    public GameObject dotToAppearPerso;
     public Rigidbody2D rb2D;
     public BoxCollider2D bc2D;
     private float speedX = 0f;
@@ -78,6 +80,16 @@ using UnityEngine;
         {
             dotToAppear.SetActive(true);
         }
+
+        if (collision.gameObject.tag == "Amour1")
+        {
+            dotToAppearAmour.SetActive(true);
+        }
+
+        if (collision.gameObject.tag == "Perso1")
+        {
+            dotToAppearPerso.SetActive(true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -85,6 +97,14 @@ using UnityEngine;
         if (collision.gameObject.tag == "Journal1")
         {
             dotToAppear.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Amour1")
+        {
+            dotToAppearAmour.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Perso1")
+        {
+            dotToAppearPerso.SetActive(false);
         }
     }
 

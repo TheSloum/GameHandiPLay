@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ChangeScene
   - Journal1
+  - Amour1
+  - Perso1
   layers:
   - Default
   - TransparentFX
