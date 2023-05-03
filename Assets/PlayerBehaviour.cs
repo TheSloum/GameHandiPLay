@@ -10,6 +10,8 @@ using UnityEngine;
     public float maxSpeed = 20f;
     public float friction = 10f;
     public GameObject dotToAppear;
+    public GameObject dotToAppearAmour;
+    public GameObject dotToAppearPerso;
     public Rigidbody2D rb2D;
     public BoxCollider2D bc2D;
     private float speedX = 0f;
