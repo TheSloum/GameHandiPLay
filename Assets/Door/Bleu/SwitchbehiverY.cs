@@ -22,7 +22,7 @@ public class SwitchbehiverY : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        _switchSizeY = transform.localScale.y / 4;
+        _switchSizeY = transform.localScale.y;
         _switchUpPos = transform.position;
         _switchDownPos = new Vector3(transform.position.x, transform.position.y - _switchSizeY, transform.position.z);
     }
@@ -59,7 +59,7 @@ public class SwitchbehiverY : MonoBehaviour
 
        
 
-
+   
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
@@ -67,41 +67,36 @@ public class SwitchbehiverY : MonoBehaviour
         {
             _isPressingSwitch = !_isPressingSwitch;
 
-            if (_isDoorOpenSwitch && !_doorBehiver. _isDoorOpen)
-            {
+        if (_isDoorOpenSwitch && !_doorBehiver. _isDoorOpen)
+        {
                  foreach (DoorbehiverY currentDB in _doorBehivers) {
              currentDB._isDoorOpen = !currentDB._isDoorOpen;
-        }
-                
+            }
             }
             else if (_isDoorCloseSwitch && _doorBehiver._isDoorOpen)
             {
                  foreach (DoorbehiverY currentDB in _doorBehivers) {
              currentDB._isDoorOpen = !currentDB._isDoorOpen;
-        }
-                
+            }
             }
         }
-if(collision.gameObject.tag == "Player")
+
+        if(collision.gameObject.tag == "Player")
         {
             _isPressingSwitch = !_isPressingSwitch;
-
             if (_isDoorOpenSwitch && !_doorBehiverY. _isDoorOpen)
             {
                  foreach (DoorbehiverYY currentDB in _doorBehiversY) {
              currentDB._isDoorOpen = !currentDB._isDoorOpen;
-        }
-                
+            }
             }
             else if (_isDoorCloseSwitch && _doorBehiverY._isDoorOpen)
             {
                  foreach (DoorbehiverYY currentDB in _doorBehiversY) {
              currentDB._isDoorOpen = !currentDB._isDoorOpen;
-        }
-                
+            }
             }
         }
-        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
