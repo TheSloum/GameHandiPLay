@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ChangeScene
+  - Journal1
+  - Amour1
+  - Perso1
   layers:
   - Default
   - TransparentFX
@@ -41,11 +45,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Bloc
-    uniqueID: 868158089
-    locked: 0
   - name: Decors
     uniqueID: 298078279
+    locked: 0
+  - name: Bloc
+    uniqueID: 868158089
     locked: 0
   - name: Player
     uniqueID: 692966543
