@@ -9,6 +9,7 @@ using UnityEngine;
     public float acceleration = 5f;
     public float maxSpeed = 20f;
     public float friction = 10f;
+    public GameObject dotToAppear;
     public Rigidbody2D rb2D;
     public BoxCollider2D bc2D;
     private float speedX = 0f;
@@ -41,4 +42,22 @@ using UnityEngine;
         return hit.collider != null;
     }
     
+
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Journal1")
+        {
+            dotToAppear.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Journal1")
+        {
+            dotToAppear.SetActive(false);
+        }
+    }
+
 }
