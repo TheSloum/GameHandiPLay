@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622108298}
   - component: {fileID: 622108299}
+  - component: {fileID: 622108300}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -158,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.00012207031, y: -1438.27}
-  m_SizeDelta: {x: 0, y: 2874.54}
+  m_AnchoredPosition: {x: -0.00012207031, y: -3800.59}
+  m_SizeDelta: {x: 0, y: 7599.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &622108299
 Animator:
@@ -181,6 +182,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &622108300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622108297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ce62be8a64a174e9f048744b6381b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146004557
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,8 +516,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0051575, y: -1437.0023}
-  m_SizeDelta: {x: 1918.2, y: 2874.5}
+  m_AnchoredPosition: {x: 0.0051575, y: -3799.5}
+  m_SizeDelta: {x: 1918.2, y: 7599.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247809112
 MonoBehaviour:
@@ -526,8 +539,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<SIZE=200><B> YEKA </B>\r</SIZE>\n<SIZE=160><B>par les Unwabu</B>\r\n</SIZE>\r\n\n<SIZE=100><I>Membre:</I>\n\n\nAm\xE9lie
-    Perrot\n\nMa\xEAl Ledrin\n\nNino Lefort\n\nClaire Vital\n\nJulie Rondof</SIZE>\n"
+  m_text: "<SIZE=200>CREDIT: </SIZE>\r\n\r\n\r\n<SIZE=200><B> YEKA </B>\r\n</SIZE>\r\n<SIZE=160><B>par
+    les Unwabu</B>\r\n</SIZE>\r\n\r\n<SIZE=100><I>Sc\xE9nario:</I>\r\nAm\xE9lie Perrot\r\n\r\n<I>Texte:</I>\r\nClaire
+    Vital\r\n\r\n<I>Image:</I>\r\nMa\xEBl Ledrin\r\nNino Lefort\r\n\r\n<I>D\xE9veloppement:</I>\r\nJulie
+    Rondof\r\nMael Ledrin\r\nNino Lefort\r\n\r\n<I>Charte Graphique:</I>\r\nMa\xEBl
+    Ledrin\r\n\r\n<I>Son:</I>\r\nPolarity sur Musicscreen.bo\r\n\r\n<I>Typographie:</I>\r\nVeteranTypeWriter\r\n\r\n<I>Logiciel:</I>\r\nUnity\r\nAfter
+    effect\r\nIllustrator\r\nFigma\r\nGit\r\nClip Studio Paint\r\n\r\n\r\n\r\n\r\n\r\n\r\n<SIZE=200>END
+    </SIZE>\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
