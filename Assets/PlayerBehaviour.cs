@@ -78,6 +78,16 @@ using UnityEngine;
         {
             dotToAppear.SetActive(true);
         }
+
+        if (collision.gameObject.tag == "Amour1")
+        {
+            dotToAppearAmour.SetActive(true);
+        }
+
+        if (collision.gameObject.tag == "Perso1")
+        {
+            dotToAppearPerso.SetActive(true);
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -85,6 +95,14 @@ using UnityEngine;
         if (collision.gameObject.tag == "Journal1")
         {
             dotToAppear.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Amour1")
+        {
+            dotToAppearAmour.SetActive(false);
+        }
+        if (collision.gameObject.tag == "Perso1")
+        {
+            dotToAppearPerso.SetActive(false);
         }
     }
 
