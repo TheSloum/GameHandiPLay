@@ -13,7 +13,7 @@ public class Doorbehive3Y : MonoBehaviour
     void Awake()
     {
         _doorClosedPos = transform.position;
-        _doorOpendPos = new Vector3(transform.position.x  + 2.5f,transform.position.y,transform.position.z);
+        _doorOpendPos = new Vector3(transform.position.x  + 3f,transform.position.y,transform.position.z);
     }
 
     // Update is called once per frame
