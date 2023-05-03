@@ -10,20 +10,20 @@ public class Switchbehiver : MonoBehaviour
 
     [SerializeField] bool _isDoorOpenSwitch;
     [SerializeField] bool _isDoorCloseSwitch;
-    
     float _switchSizeY;
     Vector3 _switchUpPos;
     Vector3 _switchDownPos;
     float  _switchSpeed = 1f;
     float _switchDelay = 0.2f;
     bool _isPressingSwitch = false;
+    public BoxCollider2D bc2D;
 
     // Start is called before the first frame update
     void Awake()
     {
         _switchSizeY = transform.localScale.y / 10;
         _switchUpPos = transform.position;
-        _switchDownPos = new Vector3(transform.position.x, transform.position.y - _switchSizeY, transform.position.z);
+        _switchDownPos = new Vector3(transform.position.x, transform.position.y - 0.158f, transform.position.z);
     }
 
     // Update is called once per frame
@@ -32,10 +32,8 @@ public class Switchbehiver : MonoBehaviour
          if (_isPressingSwitch)
         {
            MoveSwitchDown();
-         }
-         else if(!_isPressingSwitch)   
-        {
-           MoveSwitchUp();
+           
+        bc2D.enabled = false;
          }
     }
 
@@ -47,13 +45,6 @@ public class Switchbehiver : MonoBehaviour
         }
     }
 
-    void MoveSwitchUp()
-    {
-        if (transform.position != _switchUpPos)
-        {
-         transform.position = Vector3.MoveTowards(transform.position, _switchUpPos, _switchSpeed * Time.deltaTime);
-        }
-    }
     
 
        
@@ -65,15 +56,8 @@ public class Switchbehiver : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             _isPressingSwitch = !_isPressingSwitch;
-
-            if (_isDoorOpenSwitch && !_doorBehiver. _isDoorOpen)
-            {
-                 foreach (Doorbehiver currentDB in _doorBehivers) {
-             currentDB._isDoorOpen = !currentDB._isDoorOpen;
-        }
-                
-            }
-            else if (_isDoorCloseSwitch && _doorBehiver._isDoorOpen)
+            
+            if (_isDoorCloseSwitch && !_doorBehiver._isDoorOpen)
             {
                  foreach (Doorbehiver currentDB in _doorBehivers) {
              currentDB._isDoorOpen = !currentDB._isDoorOpen;

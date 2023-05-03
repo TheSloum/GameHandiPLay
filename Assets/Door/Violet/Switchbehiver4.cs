@@ -17,13 +17,14 @@ public class Switchbehiver4 : MonoBehaviour
     float  _switchSpeed = 1f;
     float _switchDelay = 0.2f;
     bool _isPressingSwitch = false;
+    public BoxCollider2D bc2D;
 
     // Start is called before the first frame update
     void Awake()
     {
         _switchSizeY = transform.localScale.y  ;
        _switchDownPos  = transform.position ;
-        _switchUpPos = new Vector3(transform.position.x, transform.position.y - _switchSizeY, transform.position.z);
+        _switchUpPos = new Vector3(transform.position.x, transform.position.y + 0.158f, transform.position.z);
     }
 
     // Update is called once per frame
@@ -32,26 +33,15 @@ public class Switchbehiver4 : MonoBehaviour
          if (_isPressingSwitch)
         {
            MoveSwitchDown();
-         }
-         else if(!_isPressingSwitch)   
-        {
-           MoveSwitchUp();
+        bc2D.enabled = false;
          }
     }
 
     void MoveSwitchDown()
     {
-        if (transform.position != _switchDownPos)
-        {
-         transform.position = Vector3.MoveTowards(transform.position,_switchDownPos , _switchSpeed * Time.deltaTime);
-        }
-    }
-
-    void MoveSwitchUp()
-    {
         if (transform.position != _switchUpPos)
         {
-         transform.position = Vector3.MoveTowards(transform.position, _switchUpPos, _switchSpeed * Time.deltaTime);
+         transform.position = Vector3.MoveTowards(transform.position,_switchUpPos , _switchSpeed * Time.deltaTime);
         }
     }
     
@@ -73,15 +63,9 @@ public class Switchbehiver4 : MonoBehaviour
         }
                 
             }
-            else if (_isDoorCloseSwitch && _doorBehiver._isDoorOpen)
-            {
-                 foreach (Doorbehive4 currentDB in _doorBehivers) {
-             currentDB._isDoorOpen = !currentDB._isDoorOpen;
-        }
                 
             }
         }
-    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {

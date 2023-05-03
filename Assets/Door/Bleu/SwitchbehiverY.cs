@@ -17,6 +17,7 @@ public class SwitchbehiverY : MonoBehaviour
     Vector3 _switchDownPos;
     float  _switchSpeed = 1f;
     float _switchDelay = 0.2f;
+    public BoxCollider2D bc2D;
     bool _isPressingSwitch = false;
 
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class SwitchbehiverY : MonoBehaviour
     {
         _switchSizeY = transform.localScale.y;
         _switchUpPos = transform.position;
-        _switchDownPos = new Vector3(transform.position.x, transform.position.y - _switchSizeY, transform.position.z);
+        _switchDownPos = new Vector3(transform.position.x, transform.position.y - 0.158f, transform.position.z);
     }
 
     // Update is called once per frame
@@ -33,10 +34,7 @@ public class SwitchbehiverY : MonoBehaviour
          if (_isPressingSwitch)
         {
            MoveSwitchDown();
-         }
-         else if(!_isPressingSwitch)   
-        {
-           MoveSwitchUp();
+        bc2D.enabled = false;
          }
     }
 
@@ -48,14 +46,6 @@ public class SwitchbehiverY : MonoBehaviour
         }
     }
 
-    void MoveSwitchUp()
-    {
-        if (transform.position != _switchUpPos)
-        {
-         transform.position = Vector3.MoveTowards(transform.position, _switchUpPos, _switchSpeed * Time.deltaTime);
-        }
-    }
-    
 
        
 
@@ -72,23 +62,11 @@ public class SwitchbehiverY : MonoBehaviour
              currentDB._isDoorOpen = !currentDB._isDoorOpen;
             }
             }
-            else if (_isDoorCloseSwitch && _doorBehiver._isDoorOpen)
-            {
-                 foreach (DoorbehiverY currentDB in _doorBehivers) {
-             currentDB._isDoorOpen = !currentDB._isDoorOpen;
-            }
-            }
         }
 
         if(collision.gameObject.tag == "Player")
         {
             if (_isDoorOpenSwitch && !_doorBehiverY. _isDoorOpen)
-            {
-                 foreach (DoorbehiverYY currentDB in _doorBehiversY) {
-             currentDB._isDoorOpen = !currentDB._isDoorOpen;
-            }
-            }
-            else if (_isDoorCloseSwitch && _doorBehiverY._isDoorOpen)
             {
                  foreach (DoorbehiverYY currentDB in _doorBehiversY) {
              currentDB._isDoorOpen = !currentDB._isDoorOpen;
