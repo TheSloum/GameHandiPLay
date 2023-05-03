@@ -66,7 +66,6 @@ public class SwitchbehiverY : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             _isPressingSwitch = !_isPressingSwitch;
-
         if (_isDoorOpenSwitch && !_doorBehiver. _isDoorOpen)
         {
                  foreach (DoorbehiverY currentDB in _doorBehivers) {
@@ -83,7 +82,6 @@ public class SwitchbehiverY : MonoBehaviour
 
         if(collision.gameObject.tag == "Player")
         {
-            _isPressingSwitch = !_isPressingSwitch;
             if (_isDoorOpenSwitch && !_doorBehiverY. _isDoorOpen)
             {
                  foreach (DoorbehiverYY currentDB in _doorBehiversY) {
