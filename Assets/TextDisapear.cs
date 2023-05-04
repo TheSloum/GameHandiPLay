@@ -1,37 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-
-public class ChangeScene : MonoBehaviour
- 
+public class TextDisapear : MonoBehaviour
 {
 
+    public int loadedNumber;
     public GameObject textDisapear;
+
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("Scene", 0);
+        loadedNumber = PlayerPrefs.GetInt("Scene");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (loadedNumber == 1)
+        {
+            textDisapear.SetActive(false);
+        }
+
+       
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "ChangeScene")
         {
-            SceneManager.LoadScene(1);
-            PlayerPrefs.SetInt("Scene", 1);
+            
             textDisapear.SetActive(false);
-
         }
     }
-
-    
-    
 }
