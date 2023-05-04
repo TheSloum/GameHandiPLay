@@ -10692,9 +10692,9 @@ MonoBehaviour:
   acceleration: 5
   maxSpeed: 20
   friction: 10
-  dotToAppear: {fileID: 0}
-  dotToAppearAmour: {fileID: 0}
-  dotToAppearPerso: {fileID: 0}
+  dotToAppear: {fileID: 1430192542}
+  dotToAppearAmour: {fileID: 932605021}
+  dotToAppearPerso: {fileID: 1293820730}
   rb2D: {fileID: 319183601}
   bc2D: {fileID: 319183602}
   animator: {fileID: 1044823469}
@@ -19443,7 +19443,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0, g: 0, b: 0, a: 0.24313726}
+        key0: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0.24313726}
         key1: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
