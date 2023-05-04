@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class ChangeScene : MonoBehaviour
- 
+public class ChangeSceneEND : MonoBehaviour
 {
-
-    public GameObject textDisapear;
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("Scene", 0);
+        
     }
 
     // Update is called once per frame
@@ -25,13 +21,9 @@ public class ChangeScene : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(1);
-            PlayerPrefs.SetInt("Scene", 1);
-            textDisapear.SetActive(false);
-
+            SceneManager.LoadScene(2);
+            PlayerPrefs.SetInt("Scene", 2);
         }
     }
-
-    
-    
 }
+
