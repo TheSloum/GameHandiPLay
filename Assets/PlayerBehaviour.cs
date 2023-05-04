@@ -51,7 +51,7 @@ using UnityEngine;
         if (IsGrounded()){
             
             animator.SetBool("Grounded", true);
-            if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)) && isIntro == fals)
+            if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)) && isIntro == false)
         {
         rb2D.gravityScale *= -1f;
         transform.localScale = new Vector3(transform.localScale.x,transform.localScale.y * -1 , transform.localScale.z);
