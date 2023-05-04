@@ -18,6 +18,7 @@ using UnityEngine;
     private float targetSpeedX = 0f;
     public Animator animator;
     public SpriteRenderer sprite;
+    public bool isIntro = false;
     void Start(){
         
         rb2D.gravityScale = 1f; // enable gravity
@@ -50,7 +51,7 @@ using UnityEngine;
         if (IsGrounded()){
             
             animator.SetBool("Grounded", true);
-            if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)))
+            if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)) && isIntro == false)
         {
         rb2D.gravityScale *= -1f;
         transform.localScale = new Vector3(transform.localScale.x,transform.localScale.y * -1 , transform.localScale.z);
